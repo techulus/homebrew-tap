@@ -5,21 +5,21 @@
 class Manageprompt < Formula
   desc "Local LLM call debugger"
   homepage "https://github.com/techulus/manage-prompt"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/techulus/manage-prompt/releases/download/v0.2.0/manageprompt_0.2.0_darwin_amd64.tar.gz"
-      sha256 "e36995f1eaa15e2b2bac5d4335073d123f3d8f8d5751c17a948368ff082856b2"
+      url "https://github.com/techulus/manage-prompt/releases/download/v0.3.0/manageprompt_0.3.0_darwin_amd64.tar.gz"
+      sha256 "346f596856d584e8144420f1e0743b2c65cea476646574b041d796e6163d442c"
 
       define_method(:install) do
         bin.install "manageprompt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/techulus/manage-prompt/releases/download/v0.2.0/manageprompt_0.2.0_darwin_arm64.tar.gz"
-      sha256 "1d614445b6ccd06d1119fe881ac655b23869fe41551fe4285f71024e21d38246"
+      url "https://github.com/techulus/manage-prompt/releases/download/v0.3.0/manageprompt_0.3.0_darwin_arm64.tar.gz"
+      sha256 "a38ac53b5e24f8f45b1a4845ad95893b49c20bddff2900129426b955ae5c69f8"
 
       define_method(:install) do
         bin.install "manageprompt"
@@ -29,15 +29,15 @@ class Manageprompt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/techulus/manage-prompt/releases/download/v0.2.0/manageprompt_0.2.0_linux_amd64.tar.gz"
-      sha256 "4183c9029118c77cc07ccbbcb7502f74d8c364c6803e1f775fefdb54611c8cb8"
+      url "https://github.com/techulus/manage-prompt/releases/download/v0.3.0/manageprompt_0.3.0_linux_amd64.tar.gz"
+      sha256 "f6b7864bb4c2b5b579a771b82cc0a321926f38f36940b31061c074e7a5959389"
       define_method(:install) do
         bin.install "manageprompt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/techulus/manage-prompt/releases/download/v0.2.0/manageprompt_0.2.0_linux_arm64.tar.gz"
-      sha256 "85dae342c01506fc297d1119bea758f673da69c67b73e9a5dcee85e86d0bb95b"
+      url "https://github.com/techulus/manage-prompt/releases/download/v0.3.0/manageprompt_0.3.0_linux_arm64.tar.gz"
+      sha256 "04fdb280efc7823152343d9b686101aa038647566724e5925d825e3b1cde2953"
       define_method(:install) do
         bin.install "manageprompt"
       end
