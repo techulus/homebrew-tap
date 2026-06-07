@@ -5,23 +5,23 @@
 class Capture < Formula
   desc "CLI for taking screenshots, PDFs, and extracting content from web pages"
   homepage "https://capture.page"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/techulus/capture-go/releases/download/v0.1.0/capture_0.1.0_darwin_amd64.tar.gz"
-      sha256 "dcc14c674b59df4877d482cd1d46da72c4c2d22b0fb8bfc3832bda049dd6f018"
+      url "https://github.com/techulus/capture-go/releases/download/v0.2.0/capture_0.2.0_darwin_amd64.tar.gz"
+      sha256 "892ffb2b852dc953fae975e397166b9996415fe62575ba7c0fb39d9134775f6c"
 
-      def install
+      define_method(:install) do
         bin.install "capture"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/techulus/capture-go/releases/download/v0.1.0/capture_0.1.0_darwin_arm64.tar.gz"
-      sha256 "dfd213079f07158d2e8aa71e9fe016d3068da9e7af7809730c35d56a09358f39"
+      url "https://github.com/techulus/capture-go/releases/download/v0.2.0/capture_0.2.0_darwin_arm64.tar.gz"
+      sha256 "7c6f181ed8c2cf2e25c0932cffb5662839f8c6aa3739a1c15586acdae455d285"
 
-      def install
+      define_method(:install) do
         bin.install "capture"
       end
     end
@@ -29,16 +29,16 @@ class Capture < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/techulus/capture-go/releases/download/v0.1.0/capture_0.1.0_linux_amd64.tar.gz"
-      sha256 "da4b4bd56733d54a366956a3061bfcd62345eac8d153fb423fec63ad157b89d4"
-      def install
+      url "https://github.com/techulus/capture-go/releases/download/v0.2.0/capture_0.2.0_linux_amd64.tar.gz"
+      sha256 "e0a6bbcf4d412db8b327ffcf4945d664fa38f2d484bff035018ae44b7e86ce32"
+      define_method(:install) do
         bin.install "capture"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/techulus/capture-go/releases/download/v0.1.0/capture_0.1.0_linux_arm64.tar.gz"
-      sha256 "5a18af5bced722e59a3ab060e8ff6bb3d7d44d08a1f3f315e1433b49f62dcbee"
-      def install
+      url "https://github.com/techulus/capture-go/releases/download/v0.2.0/capture_0.2.0_linux_arm64.tar.gz"
+      sha256 "53e7d886bc4b85b8c57861211048d1dcf3dd3950487e1b356f9abec696f93845"
+      define_method(:install) do
         bin.install "capture"
       end
     end
