@@ -5,21 +5,21 @@
 class Tc < Formula
   desc "Techulus Cloud CLI"
   homepage "https://github.com/techulus/cloud"
-  version "0.45.0"
+  version "0.46.0"
   license "AGPL-3.0-only"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/techulus/cloud/releases/download/v0.45.0/tc_0.45.0_darwin_amd64.tar.gz"
-      sha256 "6a939c52043455fe3a8751424e72b98a3fb1f0b2cce1501f19df9196d86418de"
+      url "https://github.com/techulus/cloud/releases/download/v0.46.0/tc_0.46.0_darwin_amd64.tar.gz"
+      sha256 "10d481dbc9b0d8aaac9faaec7e9e00b48bc52d2b9d841b793a75f39fd676f1f8"
 
       define_method(:install) do
         bin.install "tc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/techulus/cloud/releases/download/v0.45.0/tc_0.45.0_darwin_arm64.tar.gz"
-      sha256 "a64ff0f59cffb4001fbb0ebb658abe7d03041c7d8c3d864322bb0894ab82885d"
+      url "https://github.com/techulus/cloud/releases/download/v0.46.0/tc_0.46.0_darwin_arm64.tar.gz"
+      sha256 "7d1f46cf81642a9ebf0973765b2c8ed7d64f1b9849762eebfd6b9794b9d326af"
 
       define_method(:install) do
         bin.install "tc"
@@ -29,16 +29,16 @@ class Tc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/techulus/cloud/releases/download/v0.45.0/tc_0.45.0_linux_amd64.tar.gz"
-      sha256 "3f8138fab1e4b4288cc5768be17f1860ae7b6e24f7836737de50a8e9f172d65c"
+      url "https://github.com/techulus/cloud/releases/download/v0.46.0/tc_0.46.0_linux_amd64.tar.gz"
+      sha256 "8e151ff304bd275e9ed40b04c9b666705dc00b7315def1da7d467679f24d8232"
 
       define_method(:install) do
         bin.install "tc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/techulus/cloud/releases/download/v0.45.0/tc_0.45.0_linux_arm64.tar.gz"
-      sha256 "984a76cf84a77194d2b3d2c70d5522716b04f47cb0c73fcd9abe8433b8412a95"
+      url "https://github.com/techulus/cloud/releases/download/v0.46.0/tc_0.46.0_linux_arm64.tar.gz"
+      sha256 "998a321da8d69ba0b77c5122104822835891dc4fe3f6d045569850dcd7b11c66"
 
       define_method(:install) do
         bin.install "tc"
